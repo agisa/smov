@@ -64,7 +64,7 @@ for i in range(nrow):
         para_sum_match = data[dtype][ref_para] == sum_para
         #adding value
         if dtype == 2:
-            tram_match = data[dtype]['MA_TRAM'] == process_data.iloc[i,9]
+            tram_match = data[dtype]['TRAM_ID'] == process_data.iloc[i,9]
             matching_row = row_match & para_match & tram_match
             #A tram
             a_tram = data[dtype]['PHAN_LOP'] == 'A_TRAM'
@@ -86,7 +86,7 @@ for i in range(nrow):
         sum_res *= 1000
     ws[col + str(row + 24)] = int(round(sum_res))
 #sum data
-
+     
     
 wb.save('res.xlsx')
 os.startfile('res.xlsx', 'open')
