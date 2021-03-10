@@ -91,11 +91,4 @@ for i in range(nrow):
 wb.save('res.xlsx')
 os.startfile('res.xlsx', 'open')
 
-
-  
 #column_index_from_string('A') --> return 1
-  
-
-
-
- 
